@@ -1,14 +1,16 @@
 # Add  code here!
 
 
-def prime?(num)
-    if num % 1 == 0 && num % num == 0  
-       true
-    elsif num.negative? %  1 == 0 && num.negative? % num.negative? == 0
-        true   
-    else    
-     false
+def prime?(num) 
+    if num <= 1
+        return false
+    end
+    n = 2
+    while n < num
+    return false if num % n == 0
+    n += 1
     end
 end
+
 
 
