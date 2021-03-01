@@ -1,16 +1,18 @@
 # Add  code here!
-
-
-def prime?(num) 
-    if num <= 1
-        return false
+ 
+def prime?(num)  
+    n = 1
+    value = ""
+    value_1 = []
+    while n <= num
+        value_1 << num % n if num % n == 0  
+        n += 1
     end
-    n = 2
-    while n < num
-    return false if num % n == 0
-    n += 1
+    l = value_1.length
+    if l == 2
+        value = true
+    elsif num <= 1 || l != 2
+        value = false
     end
+    value
 end
-
-
-
